@@ -1,0 +1,30 @@
+int removeDuplicates(int* nums, int numsSize) {
+    int index;
+    int replace_index;
+    int start;
+    int count;
+    
+    count = 0;
+    start = nums[0];
+    index = 0;
+    replace_index = 0;
+        
+    for(index = 0; index < numsSize; index++)
+    {
+        if(nums[index] != start)
+        {
+            start = nums[index];
+            count = 0;
+        }
+        
+        if(count < 2 && nums[index] == start)
+        {
+            nums[replace_index] = nums[index];
+            replace_index++;
+        }
+        
+        count++;
+    }
+    
+    return replace_index;
+}
