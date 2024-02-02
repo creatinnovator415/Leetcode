@@ -1,5 +1,5 @@
-#ignore *.PDF
-*.pdf
+#ignore *.i.PDF
+*.i.pdf
 #ignore *.webp
 *.webp
 
